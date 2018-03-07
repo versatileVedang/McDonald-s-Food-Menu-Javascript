@@ -1,0 +1,242 @@
+<!Doctype html>
+<html>
+<head>
+<title>McDonalds Menu</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+var totalbill = 0;  // Defined only for once with initial value to zero
+function Item1() {
+    var quant1 = parseInt(document.getElementById("quantity1").value);
+    var total1 = 0;
+    var mcaloo = 1;
+
+    if (document.getElementById("small1").checked) {
+      mcaloo = 35;
+      document.getElementById("mcaloo")
+    } else if (document.getElementById("medium1").checked) {
+      mcaloo = 60;
+      document.getElementById("mcaloo")
+    } else if (document.getElementById("large1").checked) {
+      mcaloo = 90;
+      document.getElementById("mcaloo")
+    }
+
+    total1 = mcaloo * quant1;
+    document.getElementById("total1").value = total1;
+    totalbill += total1;
+    document.getElementById("totalbill").value = totalbill;
+  }
+
+function Item2() {
+  var quant2 = parseInt(document.getElementById("quantity2").value);
+  var total2 = 0;
+  var mcveggie = 1;
+  if (document.getElementById("small2").checked) {
+    mcveggie = 75;
+    document.getElementById("mcveggie")
+  } else if (document.getElementById("medium2").checked) {
+    mcveggie = 100;
+    document.getElementById("mcveggie")
+  } else if (document.getElementById("large2").checked) {
+    mcveggie = 120;
+    document.getElementById("mcveggie")
+  }
+
+  total2 = mcveggie * quant2;
+  document.getElementById("total2").value = total2;
+  totalbill += total2;
+  document.getElementById("totalbill").value = totalbill;
+}
+
+function Item3() {
+  var quant3 = parseInt(document.getElementById("quantity3").value);
+  var total3 = 0;
+  var macmaharaja = 1;
+  if (document.getElementById("small3").checked) {
+    macmaharaja =170;
+    document.getElementById("macmaharaja")
+  } else if (document.getElementById("medium3").checked) {
+    macmaharaja = 225;
+    document.getElementById("macmaharaja")
+  } else if (document.getElementById("large3").checked) {
+    macmaharaja = 280;
+    document.getElementById("macmaharaja")
+  }
+
+  total3 = macmaharaja * quant3;
+  document.getElementById("total3").value = total3;
+  totalbill += total3;
+  document.getElementById("totalbill").value = totalbill;
+}
+
+function Item4() {
+  var quant4 = parseInt(document.getElementById("quantity4").value);
+  var total4 = 0;
+  var frenchFries = 1;
+  if (document.getElementById("small4").checked) {
+    frenchFries = 60;
+    document.getElementById("frenchFries")
+  } else if (document.getElementById("medium4").checked) {
+    frenchFries = 90;
+    document.getElementById("frenchFries")
+  } else if (document.getElementById("large4").checked) {
+    frenchFries = 120;
+    document.getElementById("frenchFries")
+  }
+
+  total4 = frenchFries * quant4;
+  document.getElementById("total4").value = total4;
+  totalbill += total4;
+  document.getElementById("totalbill").value = totalbill;
+}
+
+
+function Item5() {
+  var quant5 = parseInt(document.getElementById("quantity5").value);
+  var total5 = 0;
+  var cokefloat = 1;
+  if (document.getElementById("small5").checked) {
+    cokefloat = 35;
+    document.getElementById("cokefloat")
+  } else if (document.getElementById("medium5").checked) {
+    cokefloat = 60;
+    document.getElementById("cokefloat")
+  }
+  total5 = cokefloat * quant5;
+  document.getElementById("total5").value = total5;
+  totalbill += total5;
+  document.getElementById("totalbill").value = totalbill;
+}
+
+function Item6()
+{
+var quant6=parseInt(document.getElementById("quantity6").value);
+var total6=0;
+var paneerWrap=1;
+if(document.getElementById("small6").checked)
+{
+paneerWrap = 190;
+document.getElementById("paneerWrap")
+}
+else if(document.getElementById("medium6").checked)
+{
+paneerWrap = 210;
+document.getElementById("paneerWrap")
+}else if(document.getElementById("large6").checked)
+{
+paneerWrap = 230;
+document.getElementById("paneerWrap")
+}
+  total6 = paneerWrap * quant6;
+  document.getElementById("total6").value = total6	;
+  totalbill += total6;
+  document.getElementById("totalbill").value = totalbill;
+}
+</script>
+
+<!--Style-->
+<style>
+#header{
+text-align:center;
+text-align:center;
+color:white;
+font-family:"Trebuchet MS", Helvetica, sans-serif;
+font-weight:150px;
+}
+
+</style>
+
+</head>
+<body style="background-image:url('wallpaper.png');width:100%;">
+<center><table width="1000" border="1" cellspacing="0"></center>
+<form name="myForm">
+  <tr height="150">
+     <td bgcolor="#CC0000"colspan="2" ><span id="head_logo"><img src="logo.png" style="float:left; display:block;background-repeat:no repeat;" height="80px"  width="140 px"></span> <center> <font size="100" style= "font-weight:bold;" ><h1 id="header"> McDonald's Menu</h1></font></center></span></td>
+	 
+  </tr>
+  <tr height="200">
+     <td width="150"> <center> <img src="mcalootikki.png" height="200px" width="200px"> </center> </td>
+     <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>Mc Aloo Tikki</strong> <br><br>
+     <input type="radio" name="mcaloo" id="small1" value="small1" checked> <strong>Small(Rs.35)</strong> <br>
+     <input type="radio" name="mcaloo" id="medium1" value="medium1"> <strong>Medium (Rs.60)</strong><br>
+     <input type="radio" name="mcaloo" id="large1" value="large1"> <strong>Large(Rs.90) </strong><br>
+     <br><br> <strong>Quantity:</strong><input type="text" name="quantity1" id="quantity1" value="">
+         <input type="button"class="btn btn-primary" id="button1" value="   BUY   " onClick="javascript: Item1();">
+   <strong>Price:</strong><input type="text" name="quantity" id="total1" value=""></td>
+  </tr>
+
+  <tr height="200">
+     <td width="220"><center><img src="McVeggie.png" width="200" height="200"></center></td>
+        <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>Mc Veggie</strong> <br><br>
+     <input type="radio" name="mcveggie" id="small2" value="small2" checked><strong>Small(Rs.75)</strong> <br>
+     <input type="radio" name="mcveggie" id="medium2" value="medium2"><strong>Medium(Rs.100)</strong> <br>
+     <input type="radio" name="mcveggie" id="large2" value="large2"><strong>Large(Rs.120)</strong> <br>
+     <br><br><strong>Quantity:</strong><input type="text" name="quantity2" id="quantity2" value="">
+         <input type="button"class="btn btn-primary" id="button1" value="   BUY   " onClick="javascript: Item2();">
+     <strong>Price:</strong><input type="text" name="quantity2" id="total2" value=""></td>
+  </tr>
+
+  <tr height="200">
+     <td width="220"><center><img src="maharaja_mac.png" width="200" height="200"></center></td>
+     <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>Mc Maharaja </strong><br><br>
+     <input type="radio" name="macmaharaja" id="small3" value="small3" checked><strong>Small(Rs.170)</strong><br>
+     <input type="radio" name="macmaharaja" id="medium3" value="medium3"><strong>Medium(Rs.225)</strong><br>
+     <input type="radio" name="macmaharaja" id="large3" value="large3"><strong>Large(Rs.280)</strong> <br>
+     <br><br><strong>Quantity:</strong><input type="text" name="quantity3" id="quantity3" value="">
+         <input type="button" class="btn btn-primary"id="button1" value="   BUY   " onClick="javascript: Item3();">
+     <strong>Price:</strong><input type="text" name="quantity3" id="total3" value=""></td>
+  </tr>
+
+  <tr height="200">
+     <td width="220"><center><img src="french_fries.png" height="200px" width="200px"></center></td>
+     <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>French Fries</strong><br><br>
+     <input type="radio" name="frenchFries" id="small4" value="small4" checked><strong>Small(Rs.60)</strong> <br>
+     <input type="radio" name="frenchFries" id="medium4" value="medium4"><strong>Medium(Rs.90)</strong><br>
+     <input type="radio" name="frenchFries" id="large4" value="large4"><strong>Large(Rs.120)</strong><br>
+     <br><br> <strong>Quantity:</strong><input type="text" name="quantity4" id="quantity4" value="">
+         <input type="button" id="button1" class="btn btn-primary" value="   BUY   " onClick="javascript: Item4();">
+     <strong>Price:</strong><input type="text" name="quantity4" id="total4" value=""></td>
+  </tr>
+
+  <tr height="200">
+     <td width="220"><center><img src="coke_float.png" width="200" height="200"></center></td>
+     <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>Coke Float</strong> <br><br>
+     <input type="radio" name="cokefloat" id="small5" value="small5" checked><strong>Small(Rs.35)</strong> <br>
+     <input type="radio" name="cokefloat" id="medium5" value="medium5"><strong>Medium(Rs.60)</strong><br>
+	 
+	 
+     
+     <br><br><strong>Quantity:</strong><input type="text" name="quantity5" id="quantity5" value="">
+         <input type="button" id="button1"class="btn btn-primary" value="   BUY   " onClick="javascript: Item5();">
+    <strong>Price:</strong><input type="text" name="quantity5" id="total5" value=""></td>
+  </tr>
+  
+  <!--- Item 6-->
+  <tr height="200">
+     <td width="220"><center><img src="McSpicy-Paneer-Wrap.png" width="200" height="200"></center></td>
+     <td bgcolor=" #ffc300" style="padding-left:10px;"><strong>Paneer Wrap</strong> <br><br>
+     <input type="radio" name="paneerWrap" id="small6" value="small6" checked><strong>Small(Rs.190)</strong> <br>
+     <input type="radio" name="paneerWrap" id="medium6" value="medium6"><strong>Medium(Rs.210)</strong><br>
+	   <input type="radio" name="paneerWrap" id="large6" value="large6"><strong>Large(Rs.230)</strong><br>
+	 
+     <br><br><strong>Quantity:</strong><input type="text" name="quantity6" id="quantity6" value="">
+         <input type="button" id="button1"class="btn btn-primary" value="   BUY   " onClick="javascript: Item6();">
+    <strong>Price:</strong><input type="text" name="quantity6" id="total6" value=""></td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" height="50" bgcolor="#CCFFB2" style="padding-left:10px;"><strong>Total Bill:</strong><input type="text" name="total" id="totalbill" value="" size="25"></td>
+  </tr>
+
+</form>
+</table>
+</body>
+</html>
